@@ -4,10 +4,10 @@ import (
 	"runtime"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/config"
-	"github.com/prest/prest/controllers"
-	"github.com/prest/prest/middlewares"
-	"github.com/prest/prest/plugins"
+	"github.com/hitlyl/prest/config"
+	"github.com/hitlyl/prest/controllers"
+	"github.com/hitlyl/prest/middlewares"
+	"github.com/hitlyl/prest/plugins"
 	"github.com/urfave/negroni"
 )
 

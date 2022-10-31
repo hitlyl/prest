@@ -9,11 +9,11 @@ import (
 	"path/filepath"
 	gotemplate "text/template"
 
-	"github.com/prest/prest/adapters"
-	"github.com/prest/prest/adapters/postgres/internal/connection"
-	"github.com/prest/prest/adapters/scanner"
-	"github.com/prest/prest/config"
-	"github.com/prest/prest/template"
+	"github.com/hitlyl/prest/adapters"
+	"github.com/hitlyl/prest/adapters/postgres/internal/connection"
+	"github.com/hitlyl/prest/adapters/scanner"
+	"github.com/hitlyl/prest/config"
+	"github.com/hitlyl/prest/template"
 	"github.com/structy/log"
 )
 

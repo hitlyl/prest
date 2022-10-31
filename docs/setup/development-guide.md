@@ -11,7 +11,7 @@ If you are not familiar with the language, read the [Effective Go](https://golan
 
 As mentioned before prest is written in **go**, as it is in the document topic of using prest in development mode it is important to know the go language path structure, if you don't know it read the page [How to Write Go Code (with GOPATH)](https://golang.org/doc/gopath_code).
 
-> Assuming you do not have the [repository cloned](https://github.com/prest/prest "git clone git@github.com:prest/prest.git") locally, we are assuming you are reading this page for the first time
+> Assuming you do not have the [repository cloned](https://github.com/hitlyl/prest "git clone git@github.com:prest/prest.git") locally, we are assuming you are reading this page for the first time
 
 Download all of pREST's dependencies
 
@@ -64,7 +64,7 @@ Codespaces run on a variety of VM-based compute options hosted by GitHub.com, wh
 
 #### How to use the prestd in Codespaces
 
-1. Access the address to create prestd codespace [here](https://github.com/prest/prest/codespaces)
+1. Access the address to create prestd codespace [here](https://github.com/hitlyl/prest/codespaces)
 2. Select the **branch** (we recommend using `main`) and click **create codespace**
   ![codespace: screenshot of select branch and create codespace button to click](/prestd-assets/setup/development-guide/codespace-step-2.png)
 3. wait for the setup... it may take a few minutes

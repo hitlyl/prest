@@ -3,7 +3,7 @@ pREST - Serve a RESTful API from any PostgreSQL database
 
 Install
 
-	go install github.com/prest/prest
+	go install github.com/hitlyl/prest
 
 Run
 

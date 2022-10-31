@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/prest/prest/adapters/postgres"
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/adapters/postgres"
+	"github.com/hitlyl/prest/config"
 )
 
 func init() {

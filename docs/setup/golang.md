@@ -19,5 +19,5 @@ The `go install` command builds and installs the packages named by the paths on 
 Since **Go 1.16**, if the arguments have version suffixes (like `@latest` or `@v1.0.0`), go install builds packages in module-aware mode, ignoring the go.mod file in the current directory or any parent directory if there is one. This is useful for installing executables without affecting the dependencies of the main module.
 
 ```sh
-go install github.com/prest/prest/cmd/prestd@latest
+go install github.com/hitlyl/prest/cmd/prestd@latest
 ```

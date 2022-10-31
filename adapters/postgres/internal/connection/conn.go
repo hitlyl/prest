@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/hitlyl/prest/config"
 	"github.com/jmoiron/sqlx"
-	"github.com/prest/prest/config"
 
 	// Used pg drive on sqlx
 	_ "github.com/lib/pq"

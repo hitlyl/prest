@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/adapters"
-	"github.com/prest/prest/cache"
-	"github.com/prest/prest/config"
-	pctx "github.com/prest/prest/context"
+	"github.com/hitlyl/prest/adapters"
+	"github.com/hitlyl/prest/cache"
+	"github.com/hitlyl/prest/config"
+	pctx "github.com/hitlyl/prest/context"
 	"github.com/structy/log"
 )
 

@@ -9,15 +9,15 @@ description: >
 You can follow one of our guides to deploy _**prestd**_ via the technology you prefer:
 
 - [Docker](/prestd/setup/docker/) **(Recommended)**
-- [Kubernetes](https://github.com/prest/prest/tree/main/install-manifests/kubernetes)
+- [Kubernetes](https://github.com/hitlyl/prest/tree/main/install-manifests/kubernetes)
 - [Heroku Guide](/prestd/setup/heroku/)
 - [Homebrew](/prestd/setup/homebrew/)
 - [Go language - bin](/prestd/setup/golang/)
 
 {{< tip "warning" >}}
-The _self-hosted_ version is up to the host to keep prestd up to date, we invite you to receive all news from prestd via [**alpha program**, learn more here](https://github.com/prest/prest/discussions/467).
+The _self-hosted_ version is up to the host to keep prestd up to date, we invite you to receive all news from prestd via [**alpha program**, learn more here](https://github.com/hitlyl/prest/discussions/467).
 {{</ tip >}}
 
 ## Troubleshooting
 
-If you encounter an error while installing _**prestd**_ on any platform, [open a new discussion thread](https://github.com/prest/prest/discussions/new) or join our [Slack](https://slack.prestd.com/).
+If you encounter an error while installing _**prestd**_ on any platform, [open a new discussion thread](https://github.com/hitlyl/prest/discussions/new) or join our [Slack](https://slack.prestd.com/).

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/avelino/slugify"
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 	"github.com/tidwall/buntdb"
 )
 

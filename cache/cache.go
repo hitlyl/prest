@@ -1,7 +1,7 @@
 package cache
 
 import (
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 )
 
 // EndpointRules checks if there is a custom caching rule for the endpoint

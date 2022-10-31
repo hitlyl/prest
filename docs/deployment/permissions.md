@@ -62,4 +62,4 @@ fields = ["name"]
 | permissions | Table permissions. Options: `read`, `write` and `delete` |
 | fields      | Fields permitted for operations                          |
 
-Configuration example: [prest.toml](https://github.com/prest/prest/blob/main/testdata/prest.toml)
+Configuration example: [prest.toml](https://github.com/hitlyl/prest/blob/main/testdata/prest.toml)

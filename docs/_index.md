@@ -38,4 +38,4 @@ curl -i -X GET http://127.0.0.1:3000/prest/public/prest_users -H "Accept: applic
 - Windows
 - BSD
 
-Download the latest version binary [here](https://github.com/prest/prest/releases/latest)!
+Download the latest version binary [here](https://github.com/hitlyl/prest/releases/latest)!

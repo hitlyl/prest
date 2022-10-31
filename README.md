@@ -1,8 +1,8 @@
 # <img align="right" src="https://docs.prestd.com/logo.png" alt="RESTful API" title="RESTful API"> prestd
 
 [![Build Status](https://travis-ci.com/prest/prest.svg?branch=main)](https://travis-ci.com/prest/prest)
-[![GoDoc](https://godoc.org/github.com/prest/prest?status.png)](https://godoc.org/github.com/prest/prest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/prest/prest)](https://goreportcard.com/report/github.com/prest/prest)
+[![GoDoc](https://godoc.org/github.com/hitlyl/prest?status.png)](https://godoc.org/github.com/hitlyl/prest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hitlyl/prest)](https://goreportcard.com/report/github.com/hitlyl/prest)
 [![codecov](https://codecov.io/gh/prest/prest/branch/main/graph/badge.svg?token=eVD9urwIEv)](https://codecov.io/gh/prest/prest)
 [![SourceLevel](https://app.sourcelevel.io/github/prest/-/prest.svg)](https://app.sourcelevel.io/github/prest/-/prest)
 [![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/prestd.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/prestd)
@@ -18,7 +18,7 @@ Contributor License Agreement - [![CLA assistant](https://cla-assistant.io/readm
 
 ## Problem
 
-There is PostgREST written in Haskell, but keeping Haskell software in production is not an easy job. With this need prestd was born. [Read more](https://github.com/prest/prest/issues/41).
+There is PostgREST written in Haskell, but keeping Haskell software in production is not an easy job. With this need prestd was born. [Read more](https://github.com/hitlyl/prest/issues/41).
 
 ## Test using Docker
 
@@ -54,11 +54,11 @@ Want to contribute to the project and don't know where to start? See our contrib
 
 Deploy to Heroku and instantly get a realtime RESTFul API backed by Heroku Postgres:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prest/prest-heroku)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hitlyl/prest-heroku)
 
 ## Documentation
 
-<https://docs.prestd.com/> ([content source](https://github.com/prest/prest/tree/main/docs) and [template source](https://github.com/prest/doc-template))
+<https://docs.prestd.com/> ([content source](https://github.com/hitlyl/prest/tree/main/docs) and [template source](https://github.com/prest/doc-template))
 
 ## run locally
 

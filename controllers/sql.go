@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/cache"
-	"github.com/prest/prest/config"
-	pctx "github.com/prest/prest/context"
+	"github.com/hitlyl/prest/cache"
+	"github.com/hitlyl/prest/config"
+	pctx "github.com/hitlyl/prest/context"
 )
 
 // ExecuteScriptQuery is a function to execute and return result of script query

@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 )
 
 func init() {

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/hitlyl/prest/adapters"
 	homedir "github.com/mitchellh/go-homedir"
-	"github.com/prest/prest/adapters"
 	"github.com/spf13/viper"
 	"github.com/structy/log"
 )
