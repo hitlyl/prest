@@ -236,6 +236,9 @@ func (adapter *Postgres) WhereByRequest(r *http.Request, initialPlaceholderID in
 						if len(tsQueryField) == 2 {
 							tsQuery = fmt.Sprintf(`%s @@ to_tsquery(array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'|'))`, tsQueryField[0], tsQueryField[1], value)
 						}
+						if len(tsQueryField) == 3 {
+							tsQuery = fmt.Sprintf(`%s @@ to_tsquery(array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'%s'))`, tsQueryField[0], tsQueryField[1], tsQueryField[2], value)
+						}
 						whereKey = append(whereKey, tsQuery)
 					default:
 						if chkInvalidIdentifier(keyInfo[0]) {
