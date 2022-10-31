@@ -234,10 +234,10 @@ func (adapter *Postgres) WhereByRequest(r *http.Request, initialPlaceholderID in
 						tsQueryField := strings.Split(keyInfo[0], "$")
 						tsQuery := fmt.Sprintf(`%s @@ to_tsquery(array_to_string(tsvector_to_array(to_tsvector('%s')),'|'))`, tsQueryField[0], value)
 						if len(tsQueryField) == 2 {
-							tsQuery = fmt.Sprintf(`%s @@ to_tsquery(array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'|'))`, tsQueryField[0], tsQueryField[1], value)
+							tsQuery = fmt.Sprintf(`%s @@ to_tsquery('%', array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'|'))`, tsQueryField[0], tsQueryField[1], tsQueryField[1], value)
 						}
 						if len(tsQueryField) == 3 {
-							tsQuery = fmt.Sprintf(`%s @@ to_tsquery(array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'%s'))`, tsQueryField[0], tsQueryField[1], tsQueryField[2], value)
+							tsQuery = fmt.Sprintf(`%s @@ to_tsquery('%',array_to_string(tsvector_to_array(to_tsvector('%s','%s')),'%s'))`, tsQueryField[0], tsQueryField[1], tsQueryField[1], value, tsQueryField[2])
 						}
 						whereKey = append(whereKey, tsQuery)
 					default:
