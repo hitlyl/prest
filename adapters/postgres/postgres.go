@@ -13,6 +13,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 	"unicode"
 
 	"github.com/lib/pq"
@@ -640,19 +641,23 @@ func (adapter *Postgres) QueryCtx(ctx context.Context, SQL string, params ...int
 }
 
 func (adapter *Postgres) Query(SQL string, params ...interface{}) (sc adapters.Scanner) {
+	begin := time.Now()
 	db, err := connection.Get()
 	if err != nil {
 		log.Println(err)
 		return &scanner.PrestScanner{Error: err}
 	}
 	SQL = fmt.Sprintf("SELECT json_agg(s) FROM (%s) s", SQL)
+	log.Debugln("query 1=", time.Since(begin))
 	log.Debugln("generated SQL:", SQL, " parameters: ", params)
 	p, err := Prepare(db, SQL)
 	if err != nil {
 		return &scanner.PrestScanner{Error: err}
 	}
 	var jsonData []byte
+	log.Debugln("query 2=", time.Since(begin))
 	err = p.QueryRow(params...).Scan(&jsonData)
+	log.Debugln("query 3=", time.Since(begin))
 	if len(jsonData) == 0 {
 		jsonData = []byte("[]")
 	}

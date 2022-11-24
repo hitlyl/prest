@@ -489,13 +489,13 @@ func ShowTable(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// set db name on ctx
-	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
+	//ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
-	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
-	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
-	defer cancel()
+	///timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	//ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
+	//defer cancel()
 
-	sc := config.PrestConf.Adapter.ShowTableCtx(ctx, schema, table)
+	sc := config.PrestConf.Adapter.ShowTable(schema, table)
 	if sc.Err() != nil {
 		errorMessage := fmt.Sprintf("error to execute query, schema error %s", sc.Err())
 		http.Error(w, errorMessage, http.StatusBadRequest)
