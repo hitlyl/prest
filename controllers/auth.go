@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/prest/prest/config"
-	"github.com/prest/prest/controllers/auth"
+	"github.com/hitlyl/prest/config"
+	"github.com/hitlyl/prest/controllers/auth"
 	"gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 )

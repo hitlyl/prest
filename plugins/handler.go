@@ -8,7 +8,7 @@ import (
 	"plugin"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 )
 
 // LoadedPlugin structure for controlling the loaded plugin

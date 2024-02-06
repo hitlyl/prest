@@ -1,8 +1,8 @@
 # pRESTd
 
 [![Build Status](https://travis-ci.com/prest/prest.svg?branch=main)](https://travis-ci.com/prest/prest)
-[![GoDoc](https://godoc.org/github.com/prest/prest?status.png)](https://godoc.org/github.com/prest/prest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/prest/prest)](https://goreportcard.com/report/github.com/prest/prest)
+[![GoDoc](https://godoc.org/github.com/hitlyl/prest?status.png)](https://godoc.org/github.com/hitlyl/prest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hitlyl/prest)](https://goreportcard.com/report/github.com/hitlyl/prest)
 [![codecov](https://codecov.io/gh/prest/prest/branch/main/graph/badge.svg?token=eVD9urwIEv)](https://codecov.io/gh/prest/prest)
 [![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/prestd.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/prestd)
 [![Discord](https://img.shields.io/badge/discord-prestd-blue?logo=discord)](https://discord.gg/JnRjvu39w8)
@@ -28,7 +28,7 @@ The pREST project is the API that addresses the need for fast and efficient solu
 
 Overall, pREST simplifies the process of creating secure and performant RESTful APIs on top of your new or old PostgreSQL database.
 
-[Read more](https://github.com/prest/prest/issues/41).
+[Read more](https://github.com/hitlyl/prest/issues/41).
 
 ## Why we built pREST
 
@@ -42,7 +42,7 @@ Additionally, as Go has taken a huge role in many other vital projects such as K
 
 Deploy to Heroku and instantly get a realtime RESTFul API backed by Heroku Postgres:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prest/prest-heroku)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hitlyl/prest-heroku)
 
 ## Documentation
 

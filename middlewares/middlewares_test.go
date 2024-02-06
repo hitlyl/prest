@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/prest/prest/config"
-	"github.com/prest/prest/controllers/auth"
+	"github.com/hitlyl/prest/config"
+	"github.com/hitlyl/prest/controllers/auth"
 	"github.com/stretchr/testify/require"
 	"gopkg.in/square/go-jose.v2"
 	"gopkg.in/square/go-jose.v2/jwt"

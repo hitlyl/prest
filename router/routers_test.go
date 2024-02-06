@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/prest/prest/adapters/postgres"
-	"github.com/prest/prest/config"
-	"github.com/prest/prest/testutils"
+	"github.com/hitlyl/prest/adapters/postgres"
+	"github.com/hitlyl/prest/config"
+	"github.com/hitlyl/prest/testutils"
 	"github.com/stretchr/testify/require"
 )
 

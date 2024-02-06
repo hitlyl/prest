@@ -8,7 +8,7 @@ import (
 	"plugin"
 	"runtime"
 
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 	"github.com/urfave/negroni/v3"
 )
 

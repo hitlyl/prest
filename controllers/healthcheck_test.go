@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/testutils"
+	"github.com/hitlyl/prest/testutils"
 	"github.com/stretchr/testify/require"
 )
 

@@ -11,10 +11,10 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	"github.com/prest/prest/adapters/postgres"
-	"github.com/prest/prest/config"
-	pctx "github.com/prest/prest/context"
-	"github.com/prest/prest/testutils"
+	"github.com/hitlyl/prest/adapters/postgres"
+	"github.com/hitlyl/prest/config"
+	pctx "github.com/hitlyl/prest/context"
+	"github.com/hitlyl/prest/testutils"
 )
 
 func init() {

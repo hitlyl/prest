@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/hitlyl/prest/adapters/postgres"
+	"github.com/hitlyl/prest/config"
 	"github.com/lib/pq"
-	"github.com/prest/prest/adapters/postgres"
-	"github.com/prest/prest/config"
 	"github.com/spf13/cobra"
 )
 

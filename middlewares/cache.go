@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/prest/prest/cache"
+	"github.com/hitlyl/prest/cache"
 	"github.com/urfave/negroni/v3"
 )
 

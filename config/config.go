@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/prest/prest/adapters"
-	"github.com/prest/prest/cache"
+	"github.com/hitlyl/prest/adapters"
+	"github.com/hitlyl/prest/cache"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"

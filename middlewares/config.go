@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"github.com/prest/prest/config"
+	"github.com/hitlyl/prest/config"
 	"github.com/rs/cors"
 	"github.com/urfave/negroni/v3"
 )

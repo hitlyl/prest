@@ -19,15 +19,15 @@ import (
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
 
+	"github.com/hitlyl/prest/adapters"
+	"github.com/hitlyl/prest/adapters/postgres/formatters"
+	"github.com/hitlyl/prest/adapters/postgres/internal/connection"
+	"github.com/hitlyl/prest/adapters/postgres/statements"
+	"github.com/hitlyl/prest/adapters/scanner"
+	"github.com/hitlyl/prest/config"
+	pctx "github.com/hitlyl/prest/context"
+	"github.com/hitlyl/prest/template"
 	"github.com/jmoiron/sqlx"
-	"github.com/prest/prest/adapters"
-	"github.com/prest/prest/adapters/postgres/formatters"
-	"github.com/prest/prest/adapters/postgres/internal/connection"
-	"github.com/prest/prest/adapters/postgres/statements"
-	"github.com/prest/prest/adapters/scanner"
-	"github.com/prest/prest/config"
-	pctx "github.com/prest/prest/context"
-	"github.com/prest/prest/template"
 	"github.com/structy/log"
 )
 

@@ -11,9 +11,9 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/structy/log"
 
-	"github.com/prest/prest/adapters"
-	"github.com/prest/prest/config"
-	pctx "github.com/prest/prest/context"
+	"github.com/hitlyl/prest/adapters"
+	"github.com/hitlyl/prest/config"
+	pctx "github.com/hitlyl/prest/context"
 )
 
 // GetTables list all (or filter) tables
