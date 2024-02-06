@@ -94,7 +94,12 @@ func WriteSQL(sql string, values []interface{}) (sc adapters.Scanner) {
 		sc = &scanner.PrestScanner{Error: err}
 		return
 	}
-
+	defer func() {
+		err := stmt.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}()
 	rowsAffected, err := result.RowsAffected()
 	if err != nil {
 		err = fmt.Errorf("could not rows affected: %v", err)
@@ -140,6 +145,12 @@ func WriteSQLCtx(ctx context.Context, sql string, values []interface{}) (sc adap
 		sc = &scanner.PrestScanner{Error: err}
 		return
 	}
+	defer func() {
+		err := stmt.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}()
 
 	rowsAffected, err := result.RowsAffected()
 	if err != nil {
