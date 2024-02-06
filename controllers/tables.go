@@ -102,6 +102,9 @@ func GetTablesByDatabaseAndSchema(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -233,6 +236,9 @@ func SelectFromTables(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -283,6 +289,9 @@ func InsertInTables(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -324,6 +333,9 @@ func BatchInsertInTables(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -390,6 +402,9 @@ func DeleteFromTable(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -460,6 +475,9 @@ func UpdateTable(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
@@ -492,6 +510,9 @@ func ShowTable(w http.ResponseWriter, r *http.Request) {
 	ctx := context.WithValue(r.Context(), pctx.DBNameKey, database)
 
 	timeout, _ := ctx.Value(pctx.HTTPTimeoutKey).(int)
+	if timeout == 0 {
+		timeout = config.PrestConf.HTTPTimeout
+	}
 	ctx, cancel := context.WithTimeout(ctx, time.Second*time.Duration(timeout))
 	defer cancel()
 
