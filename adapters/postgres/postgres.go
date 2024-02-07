@@ -673,6 +673,7 @@ func (adapter *Postgres) QueryCtx(ctx context.Context, SQL string, params ...int
 		log.Errorln(err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer p.Close()
 	var jsonData []byte
 	err = p.QueryRowContext(ctx, params...).Scan(&jsonData)
 	if len(jsonData) == 0 {
@@ -697,6 +698,7 @@ func (adapter *Postgres) Query(SQL string, params ...interface{}) (sc adapters.S
 	if err != nil {
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer p.Close()
 	var jsonData []byte
 	err = p.QueryRow(params...).Scan(&jsonData)
 	if len(jsonData) == 0 {
@@ -721,7 +723,7 @@ func (adapter *Postgres) QueryCount(SQL string, params ...interface{}) (sc adapt
 	if err != nil {
 		return &scanner.PrestScanner{Error: err}
 	}
-
+	defer p.Close()
 	var result struct {
 		Count int64 `json:"count"`
 	}
@@ -751,6 +753,7 @@ func (adapter *Postgres) QueryCountCtx(ctx context.Context, SQL string, params .
 		log.Errorln(err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer p.Close()
 
 	var result struct {
 		Count int64 `json:"count"`
@@ -934,6 +937,7 @@ func (adapter *Postgres) BatchInsertValues(SQL string, values ...interface{}) (s
 		log.Errorln(err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer stmt.Close()
 	jsonData := []byte("[")
 	rows, err := stmt.Query(values...)
 	if err != nil {
@@ -985,6 +989,7 @@ func (adapter *Postgres) BatchInsertValuesCtx(ctx context.Context, SQL string, v
 		log.Errorln(err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer stmt.Close()
 	for rows.Next() {
 		if err = rows.Err(); err != nil {
 			if err != nil {
@@ -1064,6 +1069,7 @@ func (adapter *Postgres) insert(db *sqlx.DB, tx *sql.Tx, SQL string, params ...i
 	log.Debugln(SQL, " parameters: ", params)
 	var jsonData []byte
 	err = stmt.QueryRow(params...).Scan(&jsonData)
+	defer stmt.Close()
 	return &scanner.PrestScanner{
 		Error: err,
 		Buff:  bytes.NewBuffer(jsonData),
@@ -1108,6 +1114,7 @@ func (adapter *Postgres) delete(db *sqlx.DB, tx *sql.Tx, SQL string, params ...i
 		log.Printf("could not prepare sql: %s\n Error: %v\n", SQL, err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer stmt.Close()
 	if strings.Contains(SQL, "RETURNING") {
 		rows, _ := stmt.Query(params...)
 		cols, _ := rows.Columns()
@@ -1198,6 +1205,7 @@ func (adapter *Postgres) update(db *sqlx.DB, tx *sql.Tx, SQL string, params ...i
 		log.Errorf("could not prepare sql: %s\n Error: %v\n", SQL, err)
 		return &scanner.PrestScanner{Error: err}
 	}
+	defer stmt.Close()
 	log.Debugln("generated SQL:", SQL, " parameters: ", params)
 	if strings.Contains(SQL, "RETURNING") {
 		rows, _ := stmt.Query(params...)
